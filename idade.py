@@ -1,18 +1,18 @@
-def idade_pessoa(nascimento, nome, idade):
+def idade_pessoa(nascimento, nome):
   idade = 2022 - nascimento
   if 1922<=nascimento<=2021:
-   return print(nome, nascimento)
+   return print(idade)
   else:
-    raise Exception("inválido") 
-  
-  while True:
-    try:
-      nome = input("Digite seu nome completo:    ")
-      nascimento = int(input("Digite o ano do nascimento:      ")) 
+    while True:
+      try:
+        nome = input("Digite seu nome completo:    ")
+        nascimento = int(input("Digite o ano do nascimento:      "))
 
-      idade_pessoa(nascimento, nome, idade)
-    except Exception as err:
-      print(err)
-      continue
-    else:
-      return print("Esse ano você completou {idade} anos")
+        idade = str(2022 - nascimento)
+      except Exception as err:
+        print(err)
+        continue
+      else:
+        return print("Sua idade "+ nome +", hj é " + idade )
+
+idade_pessoa(nascimento, nome)
